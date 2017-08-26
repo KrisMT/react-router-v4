@@ -25,7 +25,7 @@ class App extends Component {
               <li><NavLink to="/Counter" activeClassName="active">Counter</NavLink></li>
             </ul>
           </div>
-          <p className="App-intro">
+          <div className="App-intro">
             <Switch>
               {/*
                         <Route path="/" component={Home} exact={true} />
@@ -43,7 +43,7 @@ class App extends Component {
                 {routes.map((route,index) => (<Route key={index} path={route.path} component={route.component} exact={route.exact} />))}
                 <Route component={NoMatch} />
             </Switch>
-          </p>
+          </div>
         </div>
       </BrowserRouter>
     );

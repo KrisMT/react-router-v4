@@ -3,7 +3,14 @@ import { Redirect } from 'react-router'
 import fakeAuth from '../Auth'
 
 export default class ProtectedPage extends Component {
-  state = { signedOut: false}
+  constructor() {
+	super();
+        this.state = { signedOut: false}
+  }
+  sigout() {
+        fakeAuth.signout(() => {this.setState({signedOut:true})})
+  }
+
   render() {
   	//const { location, pattern, pathname, isExact, isAutorized, router } = this.props
     const { signedOut } = this.state  
@@ -13,11 +20,7 @@ export default class ProtectedPage extends Component {
         <h1>Protected Page</h1>
         <p>You are signed in go back to some other page and come back here.</p>
         <p>You can sign out to view the login page again.</p>
-        <button onClick={() => {
-              fakeAuth.signout(() => {
-                this.setState({signedOut:true})
-              })
-            }}>Sign out</button>
+        <button onClick={this.sigout.bind(this)}>Sign out</button>
         </div>
       )
   }
