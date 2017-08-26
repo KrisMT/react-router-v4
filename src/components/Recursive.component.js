@@ -6,8 +6,8 @@ class Recursive extends React.Component {
     return (
       <div>
         <h1>Recursive paths</h1>
-      <p>Keep clicking the links below for a recursive pattern.</p>
-{ this.props.match.params && this.props.match.params.level != null? <div><em>You are on {this.props.match.params.level}. Click Below Link</em></div>:null}
+        <p>Keep clicking the links below for a recursive pattern.</p>
+        { this.props.match.params && this.props.match.params.level != null? <div><em>You are on {this.props.match.params.level}. Click Below Link</em></div>:null}
         <div className="leftNavi">
           <ul>
             <li><Link to={this.props.match.url + "/level1"} className="active">Level 1</Link></li>

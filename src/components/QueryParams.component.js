@@ -10,7 +10,7 @@ class QueryParams extends React.Component {
     return (
       <div>
         <h1>Reading the query parameters.</h1>
-<p>Check out the links below to view the queryparams value.</p>
+        <p>Check out the links below to view the queryparams value.</p>
         <div className="leftNavi">
           <ul>
             <li><Link to={{pathname: match.url + "/level1", search: '?abc=123'}} className="active">Level 1</Link></li>
