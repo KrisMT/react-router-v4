@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router'
-import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Login, ProtectedPage } from './components'
+import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Login, ProtectedPage, CounterPage } from './components'
 import fakeAuth from './Auth'
 
 const routes = [
@@ -37,6 +37,10 @@ const routes = [
     'path':'/Protected',
     'component': () => (fakeAuth.isAuthenticated ? (<ProtectedPage />) : (<Redirect to={{pathname: '/login',state: { from: '/Protected'}
     }}/>))
+  },
+  {
+    'path': '/Counter',
+    'component': CounterPage
   }
 ];
 

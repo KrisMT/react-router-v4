@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import { Content } from '../components';
-
 class Recursive extends React.Component {
   render() {
     return (

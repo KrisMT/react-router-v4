@@ -5,7 +5,7 @@ import fakeAuth from '../Auth'
 export default class ProtectedPage extends Component {
   state = { signedOut: false}
   render() {
-  	const { location, pattern, pathname, isExact, isAutorized, router } = this.props
+  	//const { location, pattern, pathname, isExact, isAutorized, router } = this.props
     const { signedOut } = this.state  
     return (
         <div>

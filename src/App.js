@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 import routes from './routing-config'
+import { NoMatch } from './components';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               <li><NavLink to="/QueryParams" activeClassName="active">Query params</NavLink></li>
               <li><NavLink to="/Recursive" activeClassName="active">Recursive</NavLink></li>
               <li><NavLink to="/Protected" activeClassName="active">Protected</NavLink></li>
+              <li><NavLink to="/Counter" activeClassName="active">Counter</NavLink></li>
             </ul>
           </div>
           <p className="App-intro">
@@ -38,7 +40,8 @@ class App extends Component {
                             (<ProtectedPage />) :
                             (<Redirect to={{pathname: "/login", state: {from: "/Protected"}}}/> ))} />
               */}
-              {routes.map((route,index) => (<Route key={index} path={route.path} component={route.component} exact={route.exact} />))}
+                {routes.map((route,index) => (<Route key={index} path={route.path} component={route.component} exact={route.exact} />))}
+                <Route component={NoMatch} />
             </Switch>
           </p>
         </div>

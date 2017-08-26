@@ -5,7 +5,8 @@ import { Content } from '../components';
 
 class QueryParams extends React.Component {
   render() {
-    const { location, pattern, match, isExact } = this.props;
+    const { match } = this.props;
+    /*const { location, pattern, match, isExact } = this.props;*/
     return (
       <div>
         <h1>Reading the query parameters.</h1>
