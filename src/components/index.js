@@ -9,4 +9,5 @@ export {default as Recursive} from './Recursive.component';
 export {default as Login} from './Login.component';
 export {default as ProtectedPage } from './ProtectedPage.component';
 export {default as CounterPage} from './Counter.components';
+export {default as FetchPage} from './Fetch.component';
 

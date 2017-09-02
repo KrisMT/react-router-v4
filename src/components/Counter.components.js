@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { addCounter, delCounter } from "../actions/App.actions";
 import { withRouter } from 'react-router-dom';
 
-
 class CounterPage extends Component {
   render() {
     return (
@@ -33,6 +32,5 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 };
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CounterPage));

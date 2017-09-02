@@ -23,6 +23,7 @@ class App extends Component {
               <li><NavLink to="/Recursive" activeClassName="active">Recursive</NavLink></li>
               <li><NavLink to="/Protected" activeClassName="active">Protected</NavLink></li>
               <li><NavLink to="/Counter" activeClassName="active">Counter</NavLink></li>
+              <li><NavLink to="/Fetch" activeClassName="active">Fetch</NavLink></li>
             </ul>
           </div>
           <div className="App-intro">

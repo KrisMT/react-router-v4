@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router'
-import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Login, ProtectedPage, CounterPage } from './components'
+import { Home, BasicRouting, Blocking, Miss, QueryParams, Recursive, Login, ProtectedPage, CounterPage, FetchPage } from './components'
 import fakeAuth from './Auth'
 
 const routes = [
@@ -41,6 +41,10 @@ const routes = [
   {
     'path': '/Counter',
     'component': CounterPage
+  },
+  {
+    'path': '/Fetch',
+    'component': FetchPage
   }
 ];
 
